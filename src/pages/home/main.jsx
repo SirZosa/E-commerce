@@ -7,8 +7,8 @@ export default function Main(){
                 <h1>Lorem ipsum, dolor sit amet.</h1>
                 <h2>25% Discount on all Products!</h2>
                 <div className="mainLinks">
-                <MobileBtn color="solid">SHOP NOW!</MobileBtn>
-                <MobileBtn color="transparent">FIND MORE</MobileBtn>
+                <MobileBtn color="solid" url='/category/everything'>SHOP NOW!</MobileBtn>
+                <MobileBtn color="transparent" url='/category/everything'>FIND MORE</MobileBtn>
                 </div>
             </div>
         </section>

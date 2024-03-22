@@ -5,7 +5,6 @@ export default function PageSelector({ItemCount}){
     const pagesNum = Math.ceil((ItemCount / 6))
     const [searchParams, setSearchParams] = useSearchParams()
     const filterValue = searchParams.get("sort")
-    console.log(filterValue)
     const pageSelectors = (pages) =>{
         let selector = []
         for(let i=0; i<pages; i++){

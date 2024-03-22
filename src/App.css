@@ -296,6 +296,7 @@ a{
   gap: 1rem;
   width: 90%;
   margin: 1rem auto;
+  padding: 1rem 0;
 }
 
 .pageSelector a{
@@ -597,6 +598,11 @@ footer{
   text-align: center;
   background-color: #ffffff;
   border: 2px solid #e2e2e2;
+}
+
+.related-products{
+  width: 90%;
+  margin: 0 auto;
 }
 
 .active-size{
@@ -1131,6 +1137,32 @@ footer{
 
   .subscribe-input{
     width: 50%;
+  }
+
+  .productPage img{
+    margin: 1rem auto;
+    width: 60%;
+  }
+
+  .order-card, .checkoutCard{
+    max-width: 600px;
+  }
+
+  .checkout{
+    display: flex;
+    flex-direction: column;
+  }
+  .checkout-form{
+    max-width: 700px;
+    align-self: center;
+  }
+  .order-page-details{
+    width: 500px;
+    justify-content: start;
+    gap:3rem;
+  }
+  .order-page-total{
+    width: 500px;
   }
 }
 

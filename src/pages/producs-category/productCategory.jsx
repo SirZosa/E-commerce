@@ -83,7 +83,7 @@ export default function ProductsCategory(){
         <section className="category">
             <div className="categoryHeader">
                 <Link to='/'>Home</Link> 
-                <h1>{params.id === 'women'? 'Women': params.id === 'men' ? 'Men' : params.id === 'jewelery' ? 'Jewelery': ''}</h1>
+                <h1>{params.id === 'women'? 'Women': params.id === 'men' ? 'Men' : params.id === 'jewelery' ? 'Jewelery': 'Everything'}</h1>
                 <label htmlFor="sort-options">Sort by:</label>
                 <select name="sort-options" onChange={(e)=>handleFilterChange('sort',e.target.value)}>
                 <option value="Default">Default</option>

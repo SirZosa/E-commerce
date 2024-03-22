@@ -35,7 +35,7 @@ export default function Featured(){
 
     return(
             <section className="Featured">
-                <h3>Featured</h3>
+                <h3>Featured Products</h3>
                 <div className="Featured-products">
                     {productCards ? productCards : loadingCards()}
                 </div>

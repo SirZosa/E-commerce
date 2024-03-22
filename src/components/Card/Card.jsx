@@ -1,7 +1,9 @@
-export default function Card({children, pic}){
+import classNames from "classnames"
+export default function Card({children, pic, className}){
+    const classes = classNames('Card', className)
     return(
-        <div className="Card">
-            <div style={{backgroundImage:`url(${pic})`, position:'absolute', top:0, left:0, width:'90vw',height:'30vh',backgroundSize:'cover', backgroundRepeat:'no-repeat', backgroundPosition:'center', filter: 'brightness(85%)'}}></div>
+        <div className={classes}>
+            <div className="card-background" style={{backgroundImage:`url(${pic})`}}></div>
             <div className="Card-inside">
                 {children}
             </div>

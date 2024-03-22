@@ -6,7 +6,7 @@ body{
   font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
   background-color: #F5F7F9;
 }
@@ -41,7 +41,7 @@ a{
 
 .MobileNav{
   position: fixed;
-  width: 100vw;
+  width: 100%;
   top:0;
   left: 0;
   background-color: #fefefe;
@@ -103,19 +103,18 @@ a{
 .MobileNav_Open{
   background-color: #fafafa;
   height: 100vh;
-  width: 90vw;
+  width: 90%;
   position: absolute;
   top: 0;
   border: 1px solid #e2e2e2;
 }
 
 .MobileNav_Open.Open{
-  right: 0vw;
   transition: right 0.3s ease;
 }
 
 .MobileNav_Open.Close{
-  right: -90vw;
+  right: -90%;
   transition: right 0.3s ease;
 }
 
@@ -152,7 +151,6 @@ a{
 }
 
 /* Main section style */
-
 .Main{
   margin-top: 3rem;
   position: relative;
@@ -168,7 +166,7 @@ a{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100vw;
+  width: 100%;
   height: 46vh;
   filter: sepia(50%);
 }
@@ -229,10 +227,22 @@ a{
 /*Card style */
 
 .Card{
-  width: 90vw;
+  width: 90%;
   height: 30vh;
   margin: 0 auto;
   position: relative;
+}
+
+.card-background{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:30vh;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  filter: brightness(85%);
 }
 
 .Card-inside{
@@ -263,7 +273,8 @@ a{
 /*Featured style */
 .Featured{
   background-color: #f5f7f9;
-  width: 100vw;
+  width: 90%;
+  margin: 0 auto 1rem auto;
 }
 
 .Featured h3{
@@ -367,7 +378,7 @@ a{
 }
 
 .card.is-loading{
-  width: 40vw;
+  width: 40%;
 }
 
 .card.is-loading {
@@ -450,6 +461,10 @@ a{
   align-items: center;
   margin-top: 1rem;
   margin-bottom: 6rem;
+}
+
+.Links-title{
+  text-align: center;
 }
 
 .Links-icon{
@@ -628,7 +643,7 @@ footer{
   z-index: 1;
   left: 0;
   top: 0;
-  width: 100vw; 
+  width: 100%; 
   height: 100vh;
   overflow: auto;
   background-color: rgb(0,0,0);
@@ -900,4 +915,405 @@ footer{
   justify-content: start;
   width: 90%;
   margin: 0 auto;
+}
+
+@media (min-width: 768px){
+  body{
+    width: 100%;
+  }
+  .MobileNav_Open{
+    width: 300px;
+  }
+
+  .MobileNav_Open.Open{
+    right: 0px;
+  }
+  
+  .MobileNav_Open.Close{
+    right: -300px;
+  }
+
+  .home{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .Main{
+    aspect-ratio: 16/9;
+    min-height: 420px;
+  }
+  
+  .Main::before{
+    aspect-ratio: 16/9;
+    min-height: 420px;
+    background-position: top;
+  }
+  
+  .Main-inside{
+    margin-left: 5rem;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+  }
+  
+  .Main-inside h1{
+    margin-top: 2rem;
+    font-size: 3.5rem;
+    width: 60%;
+  }
+  
+  .Main-inside h2{
+    font-size: 1.75rem;
+    margin: 2rem 0 3rem 0;
+  }
+
+  .mainLinks{
+    flex-direction: row;
+    width: 50%;
+  }
+
+  .Promos{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .Card{
+    width: 30%;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .card-background{
+    
+    width:100%;
+    height:100%;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:70% 50%;
+    filter: brightness(85%);
+  }
+  
+  .Card-inside{
+    height: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: end; 
+    color: #fff;
+    text-shadow: 1px 1px 2px black; 
+  }
+  
+  .CardTopic{
+    margin: 0;
+  }
+
+  .Featured{
+    background-color: #f5f7f9;
+    width: 100%;
+  }
+  
+  .Featured h3{
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 0;
+  }
+  
+  .Featured-products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .ItemCard{
+    width: 160px; 
+    margin-top: 1rem;
+  }
+  
+  .ItemCard img{
+    width: 100%;
+    height: 150px;
+    border-radius: 3px;
+  }
+  .itemName{
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+  .itemGender, .itemPrice, .itemRate{
+    margin: 0.25rem 0;
+  }
+  
+  .itemGender{
+    color: #6c6c6c;
+    font-size: 0.8rem;
+  }
+  
+  .itemPrice{
+    font-weight: 600;
+  }
+
+  .popi{
+    width: 90%;
+    height: 420px;
+    margin:0 auto;
+  }
+
+  .popi .Card-inside{
+    margin-left: 5rem;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+  }
+
+  .popi h3{
+    margin-top: 3rem;
+    font-size: 2.5rem;
+    width: 40%;
+  }
+
+  .popi p{
+    font-size: 1.5rem;
+    width: 50%;
+    margin: 2rem 0;
+  }
+
+  .popi a{
+    margin: 0;
+    width: 200px;
+  }
+
+  .popi .card-background{
+    background-position: top;
+  }
+
+  .perks{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 2rem auto;
+    width: 90%;
+  }
+
+  .transparentCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+  }
+  
+  .cardIcon{
+    font-size: 4rem;
+  }
+  
+  .cardIcon:first-child{
+    color: #2c2c2c;
+  }
+
+  .gender-links{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+  }
+
+  .subscribe-input{
+    width: 50%;
+  }
+}
+
+@media (min-width: 1440px){
+  .Main{
+    aspect-ratio: 16/9;
+    min-height: 600px;
+  }
+  
+  .Main::before{
+    aspect-ratio: 16/9;
+    min-height: 600px;
+    background-position: top;
+  }
+  
+  .Main-inside{
+    margin-left: 10rem;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+  }
+
+  .Main-inside h1{
+    margin-top: 4rem;
+    font-size: 4rem;
+    width: 50%;
+  }
+  
+  .Main-inside h2{
+    font-size: 1.75rem;
+    margin: 2rem 0 3rem 0;
+  }
+
+  .mainLinks{
+    flex-direction: row;
+    width: 50%;
+  }
+
+  .Promos{
+    margin-top: 2rem;
+    width: 80%;
+  }
+
+  .Card{
+    width: 30%;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .card-background{
+    
+    width:100%;
+    height:100%;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:70% 50%;
+    filter: brightness(85%);
+  }
+  
+  .Card-inside{
+    height: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: end; 
+    color: #fff;
+    text-shadow: 1px 1px 2px black; 
+  }
+  
+  .CardTopic{
+    margin: 0;
+  }
+
+  .Featured{
+    background-color: #f5f7f9;
+    width: 100%;
+  }
+  
+  .Featured h3{
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 0;
+  }
+  
+  .Featured-products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .ItemCard{
+    width: 160px; 
+    margin-top: 1rem;
+  }
+  
+  .ItemCard img{
+    width: 100%;
+    height: 150px;
+    border-radius: 3px;
+  }
+  .itemName{
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+  .itemGender, .itemPrice, .itemRate{
+    margin: 0.25rem 0;
+  }
+  
+  .itemGender{
+    color: #6c6c6c;
+    font-size: 0.8rem;
+  }
+  
+  .itemPrice{
+    font-weight: 600;
+  }
+
+  .popi{
+    width: 90%;
+    height: 420px;
+    margin:0 auto;
+  }
+
+  .popi .Card-inside{
+    margin-left: 5rem;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+  }
+
+  .popi h3{
+    margin-top: 3rem;
+    font-size: 2.5rem;
+    width: 40%;
+  }
+
+  .popi p{
+    font-size: 1.5rem;
+    width: 50%;
+    margin: 2rem 0;
+  }
+
+  .popi a{
+    margin: 0;
+    width: 200px;
+  }
+
+  .popi .card-background{
+    background-position: top;
+  }
+
+  .perks{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 2rem auto;
+    width: 90%;
+  }
+
+  .transparentCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+  }
+  
+  .cardIcon{
+    font-size: 4rem;
+  }
+  
+  .cardIcon:first-child{
+    color: #2c2c2c;
+  }
+
+  .gender-links{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+  }
+
+  .subscribe-input{
+    width: 50%;
+  }
 }

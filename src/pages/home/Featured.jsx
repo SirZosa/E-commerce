@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 export default function Featured(){
     const [products, setProducts] = React.useState(null)
     React.useEffect(()=>{
-        fetch('https://fakestoreapi.com/products?limit=6')
+        fetch('https://fakestoreapi.com/products?limit=8')
         .then(res=>res.json())
         .then(data=>setProducts(data))
     },[])

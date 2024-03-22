@@ -1036,26 +1036,30 @@ footer{
   }
 
   .ItemCard{
-    width: 160px; 
+    width: 240px; 
     margin-top: 1rem;
   }
   
   .ItemCard img{
     width: 100%;
-    height: 150px;
+    height: 250px;
     border-radius: 3px;
   }
   .itemName{
     margin: 0.5rem 0;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .itemGender, .itemPrice, .itemRate{
     margin: 0.25rem 0;
+    font-size: 1.1rem;
   }
   
   .itemGender{
     color: #6c6c6c;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   
   .itemPrice{

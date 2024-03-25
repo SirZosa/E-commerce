@@ -285,6 +285,7 @@ a{
 }
 
 .Featured-products{
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -1071,6 +1072,10 @@ footer{
   
   .itemPrice{
     font-weight: 600;
+  }
+
+  .card.is-loading{
+    width: 240px;
   }
 
   .popi{

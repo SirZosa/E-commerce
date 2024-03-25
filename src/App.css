@@ -110,6 +110,7 @@ a{
 }
 
 .MobileNav_Open.Open{
+  right: 0px;
   transition: right 0.3s ease;
 }
 
